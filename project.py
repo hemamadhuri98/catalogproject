@@ -358,10 +358,10 @@ def newOrnament(store_id):
             to edit/delete.');}</script><body onload='myFunction()'>"
     if request.method == 'POST':
         newOrnament = Ornament(name=request.form['name'],
-                             description=request.form[
-                             'description'], price=request.form['price'],
-                             ornamenttype=request.form['ornamenttype'],
-                             store_id=store_id)
+                               description=request.form[
+                               'description'], price=request.form['price'],
+                               ornamenttype=request.form['ornamenttype'],
+                               store_id=store_id)
         session6.add(newOrnament)
         session6.commit()
         session6.close()
